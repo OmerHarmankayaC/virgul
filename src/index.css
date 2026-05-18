@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F5F0E8;
+    color: #0D0D0D;
+    font-family: "Space Grotesk", system-ui, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #F5F0E8; }
+  ::-webkit-scrollbar-thumb { background: #0D0D0D; border: 2px solid #F5F0E8; }
+}
+
+/* ── Logo micro-animations ── */
+.logo-square {
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-polygon {
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-group:hover .logo-square {
+  transform: translate(4px, -4px);
+}
+
+.logo-group:hover .logo-polygon {
+  transform: translate(-4px, 4px);
+}
+
+.logo-group:active .logo-square {
+  transform: translate(0px, 0px);
+}
+
+.logo-group:active .logo-polygon {
+  transform: translate(0px, 0px);
+}
+
